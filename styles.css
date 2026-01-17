@@ -467,18 +467,31 @@ h2 {
 }
 
 .os-card {
-    background: var(--bg-secondary);
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-card) 100%);
     padding: 2rem;
-    border-radius: 12px;
-    border: 1px solid var(--border);
+    border-radius: 16px;
+    border: 2px solid var(--accent);
     text-align: center;
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(74, 158, 255, 0.15);
+}
+
+.os-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), #357abd);
 }
 
 .os-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent);
-    box-shadow: 0 10px 30px var(--shadow);
+    transform: translateY(-8px);
+    border-color: #357abd;
+    box-shadow: 0 15px 40px rgba(74, 158, 255, 0.3);
 }
 
 .os-icon {
