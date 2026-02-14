@@ -611,9 +611,8 @@ h2 {
 }
 
 .pet-images {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    display: flex;
+    justify-content: center;
 }
 
 .pet-img {
